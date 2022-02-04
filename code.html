@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Spencer Meredith</title>
+    <title>Rewind: A Coding Project By Spencer Meredith</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,28 +53,65 @@
 <!-- Main Section -->
 <main class="flex-shrink-0">
     <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code for APP NAME.</h2>
+        <h2 class="border-1 border-bottom border-dark">The Code for Rewind.</h2>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
                     <!-- Finished Javascript Code Prism Will Mark It Up. -->
-                    // Call Hello World
-                    function HelloWorld(){
-                    alert("hello World");
-                    }
-                </code>
-                </pre>
+ // Get the string from the page
+// controller function
 
-            </div>
-            <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hellow World is a function that displays an alert with a message of Hello World</p>
-            </div>
+function getValue(){
 
-            </div>
-        </div>
-    </div>
+document.getElementById("alert").classList.add("invisible");
+
+let userString = document.getElementById("userString").value;
+
+let revstring = reverseString(userString);
+
+displayString(revstring);
+}
+
+// reverse the string
+// Logic function
+function reverseString(userString) {
+
+let revstring = [];
+
+// let name = Spencer
+//name[0] = 'S'
+//name[4] = 'n'
+// last pos in an array name.length - 1
+
+//reverse a string using a for loop
+for (let index = userString.length - 1; index >= 0; index--) {
+revstring += userString[index];
+}
+return revstring;
+}
+
+// Display the reversed string to the user
+// View Function
+function displayString(revstring) {
+
+//write to the page
+document.getElementById("msg").innerHTML = `Your string reversed is: ${revstring}`;
+//show the alert box
+document.getElementById("alert").classList.remove("invisible");
+
+}
+
+
+ </code>
+</pre>
+
+ </div>
+<div class="col-lg-4">
+Explain Code Here
+</div>
+</div>
+</div>
+</div>
 
 </main>
 <!-- Footer Section -->
